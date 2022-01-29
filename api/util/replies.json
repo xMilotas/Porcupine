@@ -1,0 +1,119 @@
+{
+    "spotify": {
+        "deviceNotFound": [
+            ""
+        ]
+    },
+    "timer": {
+        "deleteTimerSpecificError": [
+            "Es gibt aktuell keinen ${item} Timer.",
+            "Diesen Timer kenne ich nicht.",
+            "Sorry, aber es läuft kein ${item} Timer.",
+            "Ohje, einen ${item} Timer habe ich nicht in meiner Datenbank gefunden.",
+            "Sorry, diesen Timer kenne ich nicht."
+        ],
+        "deleteTimerSpecificSuccess":[
+            "Okay, ich habe den ${item} Timer gelöscht.",
+            "Gerne, der ${item} Timer ist gelöscht.",
+            "Okay, ist erledigt.",
+            "Okay, Timer gelöscht."
+        ],
+        "deleteTimerError": [
+            "Sorry, gerade läuft kein Timer.",
+            "Ohje, gerade läuft kein Timer.",
+            "Ich habe keinen Timer den ich löschen kann.",
+            "Es gibt aktuell keine Timer.",
+            "Tut mir leid, ich habe keine Timer in meiner Datenbank gefunden."
+        ],
+        "findTimerError": [
+            "Es sind scheinbar alle Timer abgelaufen.",
+            "Sorry, gerade läuft kein Timer.",
+            "Ohje, gerade läuft kein Timer",
+            "Es gibt aktuell keine Timer.",
+            "Tut mir leid, ich habe keine Timer in meiner Datenbank gefunden."
+        ],
+        "deleteTimerSuccess": [
+            "Okay, ich habe ${item} Timer gelöscht.",
+            "${item} Timer wurden gelöscht.",
+            "Ich habe ${item} Timer gelöscht",
+            "Okay, ist erledigt.",
+            "Okay alle Timer wurden gelöscht.",
+            "Alle Timer wurden gelöscht."
+        ], 
+        "createTimer": [
+            "Ok, ich habe einen Timer für ${item} gestellt.",
+            "${item} und der Countdown läuft.",
+            "${item} ab jetzt.",
+            "Ein ${item} Timer läuft ab jetzt.",
+            "Gerne, ich habe den ${item} Timer gestartet",
+            "Okay, ich melde mich in ${item} wieder.",
+            "Gerne, ich sage dir Bescheid wenn der ${item} Timer abgelaufen ist."
+        ],
+        "getRemainingTimeSingle": [
+            "Der ${item} Timer läuft noch ${item2}.",
+            "Der ${item} Timer ist in ${item2} abgelaufen.",
+            "In ${item2} ist der ${item} Timer abgelaufen.",
+            "Dein ${item} Timer braucht noch ${item2}.",
+            "Es dauert noch etwas. Dein ${item} Timer ist in ${item2} fertig.",
+            "Nicht mehr lange. Der Timer ist in ${item2} fertig."
+        ],
+        "getRemainingTime": [
+            "Der ${item} Timer läuft noch ${item2}. ",
+            "Der ${item} Timer ist in ${item2} abgelaufen. ",
+            "In ${item2} ist der ${item} Timer abgelaufen. ",
+            "Dein ${item} Timer braucht noch ${item2}. "
+        ],
+        "timerEnded": [
+            "Der ${item} Timer ist abgelaufen.",
+            "Dein ${item} Timer ist abgelaufen."
+        ],
+        "ipAddressChanged": [
+            "Deine IP-Adresse hat sich geändert. Ich kann aktuell keinen Timer stellen."
+        ]
+    },
+    "general": {
+        "doNothing": [
+            ""
+        ],
+        "thanks": [
+            "Gerne",
+            "Kein Problem",
+            "Dafür bin ich da",
+            "Dafür bin ich erschaffen worden",
+            "Hab ich gern gemacht",
+            "Keine Ursache",
+            "Nichts zu danken"
+        ],
+        "error": [
+            "Da ist irgendwas schiefgelaufen",
+            "Sorry, meine Schaltkreise laufen heiß",
+            "Sorry, ich habe dich zwar verstanden aber Pascal hat mich leider falsch programmiert.",
+            "Tut mir leid, aber das hab ich scheinbar noch nicht gelernt."
+        ]
+    },
+    "shoppingList": {
+        "addItem": [
+            "Okay, ${item} steht auf der ${item2} Liste.",
+            "Ich habe ${item} auf die ${item2} Liste gesetzt.",
+            "Klaro, ich hab ${item} aufgeschrieben.",
+            "${item} steht jetzt auf der Liste.",
+            "Gerne, ich habe ${item} aufgeschrieben."
+        ],
+        "error": [
+            "Ich habe leider nicht verstanden was ich auf die Liste setzen soll",
+            "Probiere das bitte noch einmal. Ich habe nicht verstanden was auf die Einkaufsliste soll."
+        ],
+        "getContentsEmpty": [
+            "Es steht aktuell nichts auf der Einkaufsliste.",
+            "Diese Liste ist aktuell leer.",
+            "Deine Einkaufsliste ist leer.",
+            "Gerade steht nichts auf der Liste"           
+        ],
+        "getContents": [
+            "Du hast: ${item} auf deiner Liste stehen.",
+            "Es steht ${item} auf der Liste.",
+            "Auf deiner Liste steht gerade: ${item}",
+            "Du brauchst: ${item}"
+        ]
+    }
+}
