@@ -42,7 +42,7 @@ async function getDevices() {
         console.log(availableDevices)
         // Check if laptop is running
         let device = availableDevices.find(e => e.name == "PASCAL-LAPTOP")
-        if (!device) device = availableDevices.find(e => e.name == "MacBook Pro")
+        if (!device) device = availableDevices.find(e => e.name == "NC-pascal-RWNWJYJ4LW")
         if (!device) {
             console.log("Laptop/mac not running")
             // Return
