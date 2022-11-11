@@ -5,6 +5,7 @@ const Timer = require('./model')
 const rhasspy = require('./rhasspy');
 const moment = require('moment')
 const path = require('path')
+const config = require('../../config')
 const getResponse = require('./reponse_builder')
 
 let globalIntervalID
@@ -102,6 +103,7 @@ async function checkTimers() {
     }, async (err, res) => {
         if (res != null) {
             await playAlarm()
+	    sendWhatsappNotification()
             createTTS(res)
             // Stop pinging the DB if no other timers are active
             active = await timersActive()
@@ -127,6 +129,11 @@ function playAlarm() {
         })
         .post(file)
 }
+
+function sendWhatsappNotification(){
+   return http(config.whatsappURL).get()
+}
+
 
 function createTTS(timer) {
     let name = timer.get('name')
