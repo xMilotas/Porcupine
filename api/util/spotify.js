@@ -3,7 +3,7 @@ const rhasspy = require('./rhasspy');
 const config = require('../../config')
 const getResponse = require('../util/reponse_builder')
 
-let currentVolume = 0
+let currentVolume = 100
 let laptopID
 
 var spotifyApi = new SpotifyWebApi(config.spotifyCredentials);
@@ -39,19 +39,11 @@ async function refreshToken() {
 async function getDevices() {
     let temp = await spotifyApi.getMyDevices().then(function (data) {
         let availableDevices = data.body.devices;
-        console.log(availableDevices)
-        // Check if laptop is running
-        let device = availableDevices.find(e => e.name == "PASCAL-LAPTOP")
-        if (!device) device = availableDevices.find(e => e.name == "NC-pascal-RWNWJYJ4LW")
-        if (!device) {
-            console.log("Laptop/mac not running")
-            // Return
-            return undefined
-        }
+        // Hardcoded soundbar ID as a spotify connect device is not showing up in list devices call
         // Store current volume for louder/quieter interactions
-        currentVolume = device.volume_percent
-        console.log(device.id)
-        return device.id
+        //currentVolume = device.volume_percent
+        device_id = '8fb8258f527e669ae346d1ee212cd0973228e18e'
+        return device_id
     }, function (err) {
         console.log('Something went wrong!', err);
     });
