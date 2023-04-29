@@ -103,8 +103,9 @@ async function checkTimers() {
     }, async (err, res) => {
         if (res != null) {
             await playAlarm()
-	    sendWhatsappNotification()
-            createTTS(res)
+            text = createTTS(res)
+            sendWhatsappNotification(text)
+            rhasspy.speakText(text)
             // Stop pinging the DB if no other timers are active
             active = await timersActive()
             if (!active) clearTimer()
@@ -130,8 +131,8 @@ function playAlarm() {
         .post(file)
 }
 
-function sendWhatsappNotification(){
-   return http(config.whatsappURL).get()
+function sendWhatsappNotification(content){
+   return http('http://192.168.0.63:8080/api/Notify?msg='+content).get()
 }
 
 
@@ -143,7 +144,7 @@ function createTTS(timer) {
     } else {
         text = getResponse("timer", "timerEnded", timer.get('duration'))
     }
-    rhasspy.speakText(text)
+    return text
 }
 
 function pingDB(timeFlag) {
