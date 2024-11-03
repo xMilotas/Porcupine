@@ -83,7 +83,6 @@ module.exports = async function (action, slots) {
 
     // Check if our public IP changed
     let publicIP = await publicIp.v4()
-    
     if(publicIP != config.publicIP){
         console.log(`Address changed - unable to ping API, ${publicIP}`)
         return getResponse("timer", "ipAddressChanged")
