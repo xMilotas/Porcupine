@@ -8,7 +8,7 @@ function lightsHandler(input, status){
 		timer: 'false'
 	};
 
-	http('http://192.168.0.63:8080/api/PowerPlugs').post(jsonDataObj);
+	http('http://192.168.178.63:8080/api/PowerPlugs').post(jsonDataObj);
 }
 
 module.exports = {

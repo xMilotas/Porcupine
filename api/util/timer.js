@@ -124,7 +124,7 @@ function clearTimer(){
 
 function playAlarm() {
     const file = fs.readFileSync(path.join(__dirname, '../../alarm.wav'))
-    return http('http://192.168.0.235:12101/api/play-wav')
+    return http('http://192.168.178.235:12101/api/play-wav')
         .headers({
             "Content-Type": "audio/wav"
         })
@@ -132,7 +132,7 @@ function playAlarm() {
 }
 
 function sendWhatsappNotification(content){
-   return http('http://192.168.0.63:8080/api/Notify?msg='+content).get()
+   return http('http://192.168.178.63:8080/api/Notify?msg='+content).get()
 }
 
 
