@@ -8,7 +8,7 @@ const http = require('wretch')
   * Speaks to the user
   */
 function speakText(text){
-  http('http://192.168.0.235:12101/api/text-to-speech?repeat=false&play=true')
+  http('http://192.168.178.235:12101/api/text-to-speech?repeat=false&play=true')
   .post(text)
 }
 

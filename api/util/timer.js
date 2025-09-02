@@ -133,9 +133,10 @@ function playAlarm() {
 
 function sendWhatsappNotification(content){
     webhookUrl = config.webhookUrl
+    console.log(content)
     return http(webhookUrl)
     .headers({
-        "Content-Type": "content/json"
+        "Content-Type": "application/json"
     })
     .post({"text": content})
 }
