@@ -132,9 +132,13 @@ function playAlarm() {
 }
 
 function sendWhatsappNotification(content){
-   return http('http://192.168.178.63:8080/api/Notify?msg='+content).get()
+    webhookUrl = config.webhookUrl
+    return http(webhookUrl)
+    .headers({
+        "Content-Type": "content/json"
+    })
+    .post({"text": content})
 }
-
 
 function createTTS(timer) {
     let name = timer.get('name')
